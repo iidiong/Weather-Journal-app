@@ -21,28 +21,30 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
+
 app.get("/all", sendData) ;
 
 function sendData (request, response ){
     response.send(projectData)
 };
+
+
 app.post("/add", addTemp);
 
 function callBack(req, res){
-    console.log(req.body)
     res.send("POST recieved")
 };
 
-app.post("/addTemp", addTemp);
 
 function addTemp(req, res) {
-    projectData.temperature = req.body.temperature;
-    projectData.date = req.body.date;
-    projectData.user_response = req.body.user_response;
-    
-    console.log(projectData);
-    res.send("POST recieved");
+  
+   projectData.temperature = req.body.temperature;
+   projectData.date = req.body.date;
+   projectData.user_response = req.body.user_response;
+
+  res.send("POST recieved");
 }
+
 
 // Setup Server
 app.listen(port, () => {

@@ -14,7 +14,6 @@ body{
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
-   
 }
 
 .holder{
@@ -22,11 +21,22 @@ body{
 
 }
 
+.feel {
+    display: flex;
+    align-items: flex-end;
+}
+.button-cont {
+    padding: 10px 0 10px 10px;
+}
+
 .entry{
     background: rgba(59, 74, 107, .4);
+    margin-bottom: 10px;
+    padding-left: 5px;
 }
 
 #entryHolder{
+   
 
 }
 
@@ -43,6 +53,9 @@ body{
 }
 
 .headline {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 
 }
 .title{
